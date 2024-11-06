@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: commonHead}"></head>
+<body>
+	<div class="container text-center pt-5">
+	    <h1 th:text="${mensagem}"></h1>
+	    <p>Estamos felizes em tê-lo aqui. Explore nosso site e descubra mais sobre nossos serviços!</p>
+	    <a th:href="@{/home}" class="btn btn-primary">Home</a>
+		<a href="javascript: document.logoutForm.submit()" class="btn btn-danger" role="menuitem">Sair</a>
+	   	<form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+	    	<input hidden type="submit" value="Sign Out"/>
+	   	</form> 
+	</div>
+</body>
+</html>

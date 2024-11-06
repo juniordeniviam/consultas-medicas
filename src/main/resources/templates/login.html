@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{fragments/head :: commonHead}"></head>
+<body>
+	<div class="background-image">
+	    <div class="overlay"></div>
+	    <div class="container">
+	        <div class="row justify-content-center login">
+	            <div class="col-md-4 card-login pb-5">
+	                <h2 class="text-center">Login</h2>
+	                <form th:action="@{/login}" method="post" class="form-login">
+	                    <div class="form-group">
+	                        <label for="username">Usuário</label>
+	                        <input type="text" id="username" name="username" class="form-control" required autocomplete="username"/>
+	                    </div>
+	                    <div class="form-group">
+	                        <label for="password">Senha</label>
+	                        <input type="password" id="password" name="password" class="form-control" required autocomplete="current-password"/>
+	                    </div>
+	                    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+	                    <div th:if="${param.error}" class="alert alert-danger mt-2" role="alert">
+	                        Usuário ou senha inválidos!
+	                    </div>
+	                </form>
+	                <div th:if="${param.logout}" class="alert alert-success mt-2" role="alert">
+	                    Você foi desconectado com sucesso!
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</body>
+</html>
