@@ -1,4 +1,4 @@
-package com.teste.consultas_medicas;
+package com.viannarp.consultamedica;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
