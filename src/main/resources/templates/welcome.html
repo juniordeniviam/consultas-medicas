@@ -6,7 +6,7 @@
 	    <h1 th:text="${mensagem}"></h1>
 	    <p>Estamos felizes em tê-lo aqui. Explore nosso site e descubra mais sobre nossos serviços!</p>
 	    <a th:href="@{/home}" class="btn btn-primary">Home</a>
-		<a th:href="@{/swagger-ui/index.html}" class="btn btn-primary">Swagger</a>
+		<a th:href="@{/swagger-ui/index.html}" class="btn btn-primary" target="_blank">Swagger</a>
 		<a href="javascript: document.logoutForm.submit()" class="btn btn-danger" role="menuitem">Sair</a>
 	   	<form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
 	    	<input hidden type="submit" value="Sign Out"/>
