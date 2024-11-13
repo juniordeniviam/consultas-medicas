@@ -5,9 +5,9 @@
 	<div class="container text-center pt-5">
 	    <h1 th:text="${mensagem}"></h1>
 	    <p>Estamos felizes em tê-lo aqui. Explore nosso site e descubra mais sobre nossos serviços!</p>
-	    <a th:href="@{/home}" class="btn btn-primary">Home</a>
-		<a th:href="@{/swagger-ui/index.html}" class="btn btn-primary" target="_blank">Swagger</a>
-		<a href="javascript: document.logoutForm.submit()" class="btn btn-danger" role="menuitem">Sair</a>
+	    <a th:href="@{/home}" class="btn mr-5 btn-primary">Home</a>
+		<a th:href="@{/swagger-ui/index.html}" class="btn mr-5 btn-primary" target="_blank">Swagger</a>
+		<a href="javascript: document.logoutForm.submit()" class="btn mr-5 btn-danger" role="menuitem">Sair</a>
 	   	<form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
 	    	<input hidden type="submit" value="Sign Out"/>
 	   	</form> 
