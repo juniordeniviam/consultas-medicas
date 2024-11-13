@@ -19,12 +19,12 @@
 	                    </div>
 	                    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
 	                    <div th:if="${param.error}">                        
-							<p class="alert alert-danger mt-2">Usuário ou senha inválidos!</p>
+							<p class="alert alert-danger mt-3">Usuário ou senha inválidos!</p>
 	                    </div>
+						<div th:if="${param.logout}">	                    
+							<p class="alert alert-success mt-3">Você foi desconectado com sucesso!</p>
+		                </div>
 	                </form>
-	                <div th:if="${param.logout}">	                    
-						<p class="alert alert-success mt-2">Você foi desconectado com sucesso!</p>
-	                </div>
 	            </div>
 	        </div>
 	    </div>
