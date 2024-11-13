@@ -18,12 +18,12 @@
 	                        <input type="password" id="password" name="password" class="form-control" required autocomplete="current-password"/>
 	                    </div>
 	                    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-	                    <div th:if="${param.error}" class="alert alert-danger mt-2" role="alert">
-	                        Usuário ou senha inválidos!
+	                    <div th:if="${param.error}">                        
+							<p class="alert alert-danger mt-2">Usuário ou senha inválidos!</p>
 	                    </div>
 	                </form>
-	                <div th:if="${param.logout}" class="alert alert-success mt-2" role="alert">
-	                    Você foi desconectado com sucesso!
+	                <div th:if="${param.logout}">	                    
+						<p class="alert alert-success mt-2">Você foi desconectado com sucesso!</p>
 	                </div>
 	            </div>
 	        </div>

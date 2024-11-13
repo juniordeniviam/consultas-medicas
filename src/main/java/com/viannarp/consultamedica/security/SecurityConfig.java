@@ -28,7 +28,7 @@ public class SecurityConfig {
             )
             .logout(logout -> logout
                 .logoutUrl("/logout") // URL para logout
-                .logoutSuccessUrl("/login") // Redireciona após logout
+                .logoutSuccessUrl("/login?logout") // Redireciona após logout
                 .invalidateHttpSession(true) // Invalida a sessão
                 .clearAuthentication(true) // Limpa a autenticação
                 .permitAll() // Permite logout
