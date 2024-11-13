@@ -18,8 +18,6 @@ import com.viannarp.consultamedica.model.Paciente;
 import com.viannarp.consultamedica.repository.PacienteRepository;
 import com.viannarp.consultamedica.service.PacienteService;
 
-import jakarta.validation.Valid;
-
 @RestController
 @RequestMapping("/api/pacientes")
 public class PacienteController {

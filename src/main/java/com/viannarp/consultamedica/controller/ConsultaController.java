@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.viannarp.consultamedica.dto.ConsultaDTO;
 import com.viannarp.consultamedica.model.Consulta;
 import com.viannarp.consultamedica.repository.ConsultaRepository;
-import com.viannarp.consultamedica.repository.PacienteRepository;
 import com.viannarp.consultamedica.service.ConsultaService;
 
 @RestController
@@ -26,9 +25,6 @@ public class ConsultaController {
     @Autowired
     private ConsultaRepository consultaRepository;
 
-    @Autowired
-    private PacienteRepository pacienteRepository;
-    
     @Autowired
     private ConsultaService consultaService;
     
