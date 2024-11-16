@@ -1,14 +1,7 @@
 package com.viannarp.consultamedica.model;
 
-import java.time.LocalDateTime;
-
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -22,17 +15,17 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@EntityListeners(AuditingEntityListener.class)
 public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long usuarioId;
 	
-	@NotBlank
+	@NotBlank(message = "O nome não pode ser vazio.")
+	@Size(min = 3, max = 255, message = "O nome precisa ser entre 3 e 255 caracteres.")
 	private String nome;
 	
-	@NotBlank
+	@NotBlank(message = "O login não pode ser vazio.")
 	@Column(unique = true)
 	private String login;
 	
@@ -40,14 +33,7 @@ public class Usuario {
 	@Size(min = 6, message = "A senha deve ter pelo menos 6 caracteres")
 	private String senha;
 	
-	@NotBlank
+	@NotBlank(message = "O role não pode ser vazio.")
 	private String role;
 
-    @CreatedDate
-    @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt;
-
-    @LastModifiedDate
-    @Column(nullable = false)
-    private LocalDateTime updatedAt;
 }
