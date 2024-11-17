@@ -221,10 +221,14 @@
   z-index: 9999;
 }
 
-
-
 body {
 	background-color: #fbfbfb;
+}
+
+.center{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h2{
