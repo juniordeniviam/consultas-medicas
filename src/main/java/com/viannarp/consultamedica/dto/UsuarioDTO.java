@@ -27,6 +27,10 @@ public class UsuarioDTO {
 	@Column(unique = true)
 	private String login;
 	
+	@NotBlank
+	@Size(min = 6, message = "A senha deve ter pelo menos 6 caracteres")
+	private String senha;
+	
 	@NotBlank(message = "O role não pode ser vazio.")
 	private String role;
 
